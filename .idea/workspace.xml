@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fdcba8-b451-4eeb-8dbe-a8bc94f7ed86" name="Changes" comment="" />
+    <list default="true" id="39fdcba8-b451-4eeb-8dbe-a8bc94f7ed86" name="Changes" comment="project start">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/App.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/NoteDto.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/model/Model.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/repository/NoteReposiroty.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/.data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,12 +47,41 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build protocol_managment.executor": "Run",
+    "Kotlin.AppKt.executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/home/guest/Projects/personal/protocol_managment/src/main/kotlin/Main.kt"
+    "onboarding.tips.debug.path": "/home/guest/Projects/personal/protocol_managment/src/main/kotlin/Main.kt",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/com/l3muk" />
+    </key>
+    <key name="CreateKotlinClassDialog.RecentsKey">
+      <recent name="l3muk.dto" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="l3muk.AppKt" />
+      <module name="protocol_managment.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.AppKt" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,16 +91,33 @@
       <option name="presentableId" value="Default" />
       <updated>1725545436037</updated>
     </task>
+    <task id="LOCAL-00001" summary="project start">
+      <option name="closed" value="true" />
+      <created>1725545999935</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725545999935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="project start" />
+    <option name="LAST_COMMIT_MESSAGE" value="project start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/l3muk/App.kt</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
