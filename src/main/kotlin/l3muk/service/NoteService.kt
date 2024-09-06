@@ -12,7 +12,9 @@ interface NoteService {
 }
 
 @Service
-class NoteServiceImpl(private val noteRepository: NoteRepository) : NoteService{
+class NoteServiceImpl(
+  private val noteRepository: NoteRepository
+) : NoteService {
 
   override fun createNote(note: NoteCreateRequest) {
     noteRepository.findByProtocol(note.protocol)?.let {
@@ -24,7 +26,6 @@ class NoteServiceImpl(private val noteRepository: NoteRepository) : NoteService{
   override fun getNoteByProtocol(protocol: Int): NoteResponse? {
     return noteRepository.findByProtocol(protocol)
       ?.toResponse()
-      ?: throw RuntimeException("protocol not found")
   }
 
   private fun NoteCreateRequest.toModel() = Note(
@@ -43,5 +44,4 @@ class NoteServiceImpl(private val noteRepository: NoteRepository) : NoteService{
     recipient = recipient,
     author = author
   )
-
 }

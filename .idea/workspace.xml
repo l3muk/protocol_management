@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39fdcba8-b451-4eeb-8dbe-a8bc94f7ed86" name="Changes" comment="project start">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/App.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/NoteDto.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/model/Model.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/repository/NoteReposiroty.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/.data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" />
+    <list default="true" id="39fdcba8-b451-4eeb-8dbe-a8bc94f7ed86" name="Changes" comment="feat: add creation and find note resources">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Response.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/NoteDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Request.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +33,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "l3muk"
+  }
 }]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/l3muk/protocol_managment.git",
+    "accountId": "9b87f8b6-cf49-42f0-bc18-2f5feff52bfe"
+  }
+}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2lefPBaZLM3JqLZpY47um3LJzrB" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,19 +57,24 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build protocol_managment.executor": "Run",
-    "Kotlin.AppKt.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Kotlin.AppKt.executor": "Debug",
     "Kotlin.MainKt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/guest/Projects/personal/protocol_managment/src/main/kotlin/l3muk/dto",
     "onboarding.tips.debug.path": "/home/guest/Projects/personal/protocol_managment/src/main/kotlin/Main.kt",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/kotlin/l3muk/dto" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin/com/l3muk" />
     </key>
@@ -99,12 +113,21 @@
       <option name="project" value="LOCAL" />
       <updated>1725545999935</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add creation and find note resources">
+      <option name="closed" value="true" />
+      <created>1725565346228</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1725565346228</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project start" />
-    <option name="LAST_COMMIT_MESSAGE" value="project start" />
+    <MESSAGE value="feat: add creation and find note resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add creation and find note resources" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -117,6 +140,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="9" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

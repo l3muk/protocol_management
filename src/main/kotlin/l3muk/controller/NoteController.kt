@@ -5,6 +5,7 @@ import l3muk.dto.NoteResponse
 import l3muk.service.NoteService
 import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
+import org.springframework.web.server.ResponseStatusException
 
 interface NoteApi {
   fun createNote(note: NoteCreateRequest)
@@ -19,8 +20,13 @@ class NoteController(
 
   @PostMapping
   @ResponseStatus(HttpStatus.CREATED)
-  override fun createNote(@RequestBody note: NoteCreateRequest) = noteService.createNote(note)
+  override fun createNote(@RequestBody note: NoteCreateRequest) =
+    noteService.createNote(note)
 
   @GetMapping
-  override fun getNoteByProtocol(@RequestBody protocol: Int) = noteService.getNoteByProtocol(protocol)
+  override fun getNoteByProtocol(@RequestParam protocol: Int) =
+    noteService.getNoteByProtocol(protocol)
+      ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "protocol not found")
+
+
 }
