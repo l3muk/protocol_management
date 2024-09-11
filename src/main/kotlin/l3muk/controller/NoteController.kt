@@ -4,12 +4,13 @@ import l3muk.dto.NoteCreateRequest
 import l3muk.dto.NoteResponse
 import l3muk.service.NoteService
 import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
-import org.springframework.web.server.ResponseStatusException
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder
 
 interface NoteApi {
-  fun createNote(note: NoteCreateRequest)
-  fun getNoteByProtocol(protocol: Int): NoteResponse?
+  fun createNote(note: NoteCreateRequest): ResponseEntity<Unit>
+  fun getNoteByProtocol(protocol: Int): ResponseEntity<NoteResponse>
 }
 
 @RestController
@@ -19,14 +20,22 @@ class NoteController(
 ) : NoteApi {
 
   @PostMapping
-  @ResponseStatus(HttpStatus.CREATED)
-  override fun createNote(@RequestBody note: NoteCreateRequest) =
-    noteService.createNote(note)
+  override fun createNote(@RequestBody note: NoteCreateRequest): ResponseEntity<Unit> {
+    val noteId = noteService.createNote(note)
+    val location = ServletUriComponentsBuilder
+      .fromCurrentRequest()
+      .path("/{id}")
+      .buildAndExpand(noteId)
+      .toUri()
+
+    return ResponseEntity.created(location).build()
+  }
 
   @GetMapping
   override fun getNoteByProtocol(@RequestParam protocol: Int) =
-    noteService.getNoteByProtocol(protocol)
-      ?: throw ResponseStatusException(HttpStatus.NOT_FOUND, "protocol not found")
+    ResponseEntity.ok(noteService.getNoteByProtocol(protocol))
+
+
 
 
 }
