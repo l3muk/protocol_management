@@ -8,3 +8,7 @@ data class NoteCreateRequest(
   val author: String
 )
 
+data class UserCreateRequest(
+  val username: String,
+  val password: String
+)

@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39fdcba8-b451-4eeb-8dbe-a8bc94f7ed86" name="Changes" comment="feat: add creation and find note resources">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/ErrorHandler.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/exception/Exception.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/l3muk/AppIntegrationTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/config/security/SecurityWebConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/UserService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Request.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Request.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/exception/Exception.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/exception/Exception.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/model/Model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/model/Model.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/repository/NoteReposiroty.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/repository/Repository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/l3muk/AppIntegrationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/l3muk/AppIntegrationTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <recent name="l3muk.dto" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AppIntegrationTests.should create a note and return location header">
+  <component name="RunManager" selected="Gradle.AppIntegrationTests">
     <configuration name="AppIntegrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -208,9 +207,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AppIntegrationTests" />
         <item itemvalue="Gradle.AppIntegrationTests.should create a note and return location header" />
         <item itemvalue="Kotlin.AppKt" />
-        <item itemvalue="Gradle.AppIntegrationTests" />
         <item itemvalue="Gradle.AppIntegrationTests.Given Non-Existent Protocol When Get Called Then Should Return Not Found" />
         <item itemvalue="Gradle.AppIntegrationTests.should create a note and return a Location header" />
       </list>
