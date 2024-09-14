@@ -2,12 +2,14 @@ package l3muk.service
 
 import l3muk.dto.NoteCreateRequest
 import l3muk.dto.NoteResponse
+import l3muk.exception.DuplicateProtocolException
+import l3muk.exception.NoteNotFoundException
 import l3muk.model.Note
 import l3muk.repository.NoteRepository
 import org.springframework.stereotype.Service
 
 interface NoteService {
-  fun createNote(note: NoteCreateRequest)
+  fun createNote(note: NoteCreateRequest): Long?
   fun getNoteByProtocol(protocol: Int): NoteResponse?
 }
 
@@ -16,17 +18,18 @@ class NoteServiceImpl(
   private val noteRepository: NoteRepository
 ) : NoteService {
 
-  override fun createNote(note: NoteCreateRequest) {
+  override fun createNote(note: NoteCreateRequest): Long? {
     noteRepository.findByProtocol(note.protocol)?.let {
-      throw RuntimeException("that protocol already registered")
+      throw DuplicateProtocolException("the protocol [${note.protocol}] already registered")
     }
-    noteRepository.save(note.toModel())
+
+    return noteRepository.save(note.toModel()).id
   }
 
-  override fun getNoteByProtocol(protocol: Int): NoteResponse? {
-    return noteRepository.findByProtocol(protocol)
+  override fun getNoteByProtocol(protocol: Int) =
+    noteRepository.findByProtocol(protocol)
       ?.toResponse()
-  }
+      ?: throw NoteNotFoundException("note not found")
 
   private fun NoteCreateRequest.toModel() = Note(
     protocol = protocol,
@@ -45,3 +48,4 @@ class NoteServiceImpl(
     author = author
   )
 }
+

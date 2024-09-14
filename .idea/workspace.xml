@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39fdcba8-b451-4eeb-8dbe-a8bc94f7ed86" name="Changes" comment="feat: add creation and find note resources">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Response.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/config/security/SecurityWebConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/UserService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/controller/NoteController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/NoteDto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Request.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/service/NoteService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Request.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/dto/Request.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/exception/Exception.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/exception/Exception.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/model/Model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/model/Model.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/l3muk/repository/NoteReposiroty.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/l3muk/repository/Repository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/l3muk/AppIntegrationTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/l3muk/AppIntegrationTests.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +25,16 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -33,18 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "l3muk"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;l3muk&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/l3muk/protocol_managment.git",
-    "accountId": "9b87f8b6-cf49-42f0-bc18-2f5feff52bfe"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/l3muk/protocol_managment.git&quot;,
+    &quot;accountId&quot;: &quot;9b87f8b6-cf49-42f0-bc18-2f5feff52bfe&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -54,23 +66,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build protocol_managment.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Kotlin.AppKt.executor": "Debug",
-    "Kotlin.MainKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/guest/Projects/personal/protocol_managment/src/main/kotlin/l3muk/dto",
-    "onboarding.tips.debug.path": "/home/guest/Projects/personal/protocol_managment/src/main/kotlin/Main.kt",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AppIntegrationTests.Given Non-Existent Protocol When Get Called Then Should Return Bad Request.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppIntegrationTests.Given Non-Existent Protocol When Get Called Then Should Return Not Found.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppIntegrationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppIntegrationTests.given note data when post called then should return created.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppIntegrationTests.should create a note and return a Location header.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AppIntegrationTests.should create a note and return location header.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build protocol_managment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.AppKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/limao/Coding/pocs/protocol_managment&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/home/guest/Projects/personal/protocol_managment/src/main/kotlin/Main.kt&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Kotlin&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin/l3muk/dto" />
@@ -82,7 +101,103 @@
       <recent name="l3muk.dto" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gradle.AppIntegrationTests">
+    <configuration name="AppIntegrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;l3muk.AppIntegrationTests&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppIntegrationTests.Given Non-Existent Protocol When Get Called Then Should Return Not Found" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;l3muk.AppIntegrationTests.Given Non-Existent Protocol When Get Called Then Should Return Not Found&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppIntegrationTests.should create a note and return a Location header" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;l3muk.AppIntegrationTests.should create a note and return a Location header&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AppIntegrationTests.should create a note and return location header" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;l3muk.AppIntegrationTests.should create a note and return location header&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="AppKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="l3muk.AppKt" />
       <module name="protocol_managment.main" />
@@ -92,7 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AppIntegrationTests" />
+        <item itemvalue="Gradle.AppIntegrationTests.should create a note and return location header" />
         <item itemvalue="Kotlin.AppKt" />
+        <item itemvalue="Gradle.AppIntegrationTests.Given Non-Existent Protocol When Get Called Then Should Return Not Found" />
+        <item itemvalue="Gradle.AppIntegrationTests.should create a note and return a Location header" />
       </list>
     </recent_temporary>
   </component>
@@ -132,20 +251,29 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
+        <line-breakpoint type="kotlin-line">
           <url>file://$PROJECT_DIR$/src/main/kotlin/com/l3muk/App.kt</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
+        <breakpoint type="java-exception">
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="9" />
         </breakpoint>
+        <breakpoint type="java-exception">
+          <properties class="org.springframework.web.client.RestClientException" package="org.springframework.web.client" />
+          <option name="timeStamp" value="10" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="org.springframework.http.client.SimpleClientHttpRequest" memberName="body" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
