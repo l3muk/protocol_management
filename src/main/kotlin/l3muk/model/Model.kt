@@ -5,7 +5,11 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.JoinTable
+import jakarta.persistence.ManyToMany
 import org.springframework.security.core.GrantedAuthority
+import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
 @Entity(name = "notes")
@@ -23,17 +27,10 @@ data class Note(
 
 @Entity(name = "users")
 data class User(
-  @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Id
   val id: Long? = null,
+  @Column(unique = true)
   val username: String,
-  val password: String
-): UserDetails {
-  override fun getAuthorities(): MutableCollection<out GrantedAuthority> {
-    TODO("Not yet implemented")
-  }
-
-  override fun getPassword() = password
-
-  override fun getUsername() = username
-}
+  val hashedPassword: String,
+)

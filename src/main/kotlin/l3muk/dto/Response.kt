@@ -9,4 +9,14 @@ data class NoteResponse(
   val author: String
 )
 
+data class UserResponse(
+  val id: Long,
+  val username: String,
+  val password: String
+)
+
+data class UserListResponse(
+  val users: List<UserResponse>,
+  val total: Int
+)
 
