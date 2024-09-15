@@ -1,6 +1,7 @@
 package l3muk.controller
 
 import l3muk.exception.DuplicateProtocolException
+import l3muk.exception.DuplicateUsernameException
 import l3muk.exception.NoteNotFoundException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -25,6 +26,16 @@ class ResponseErrorHandler {
             HttpStatus.BAD_REQUEST.value(),
             ex.message
         )
+        return ResponseEntity(body, HttpStatus.BAD_REQUEST)
+    }
+
+    @ExceptionHandler
+    fun handleDuplicateUsernameException(ex: DuplicateUsernameException): ResponseEntity<ErrorResponseBody> {
+        val body = ErrorResponseBody(
+            HttpStatus.BAD_REQUEST.value(),
+            ex.message
+        )
+
         return ResponseEntity(body, HttpStatus.BAD_REQUEST)
     }
 }

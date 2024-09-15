@@ -1,0 +1,1 @@
+INSERT INTO users (username, hashed_password) VALUES ('admin', '$2a$12$oQ7AwZF3zrBIfdLbvlxhwOV5ZVkQZHh8HjodHWgxm/2YslH6e518O');

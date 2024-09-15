@@ -1,6 +1,8 @@
 package l3muk.service
 
 import l3muk.dto.UserCreateRequest
+import l3muk.dto.UserListResponse
+import l3muk.dto.UserResponse
 import l3muk.exception.DuplicateUsernameException
 import l3muk.model.User
 import l3muk.repository.UserRepository
@@ -10,27 +12,43 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 
-interface UserService {
+interface IUserService {
   fun createUser(user: UserCreateRequest): User
+  fun getUsers(): UserListResponse
 }
 
 @Service
-class UserServiceImpl(
+class IUserServiceImpl(
   private val userRepository: UserRepository,
   private val passwordEncoder: PasswordEncoder
-) : UserService, UserDetailsService {
+) : IUserService {
 
-  override fun loadUserByUsername(username: String): UserDetails =
-    userRepository.findByUsername(username) ?: throw UsernameNotFoundException(username)
+  override fun createUser(user: UserCreateRequest): User {
+    if (userExists(user.username)) {
+      throw DuplicateUsernameException("username is taken!")
+    }
+    return userRepository.save(user.toModel())
+  }
 
-  override fun createUser(user: UserCreateRequest): User =
-    userRepository.findByUsername(user.username)?.let {
-      throw DuplicateUsernameException("the username ${user.username} is unavailable")
-    } ?: userRepository.save(user.toModel())
+  override fun getUsers(): UserListResponse {
+    val users = userRepository.findAll().map { it.toResponse() }
+    return UserListResponse(users, users.size)
+  }
+
+  private fun userExists(username: String) =
+    userRepository.existsByUsername(username)
+
+  private fun User.toResponse() = UserResponse(
+    id = id!!,
+    username = username,
+    password = hashedPassword
+  )
 
   private fun UserCreateRequest.toModel() = User(
     username = username,
-    password = passwordEncoder.encode(password)
+    hashedPassword = passwordEncoder.encode(password)
   )
-
 }
+
+
+
